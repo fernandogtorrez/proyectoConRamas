@@ -5,7 +5,6 @@ require('colors')
 const comando = argv[2]
 let respuesta
 
-
 switch (comando) {
     case 'listar':
         moduloProductos.listar()
@@ -29,12 +28,10 @@ switch (comando) {
         break
     case 'filtrar':
         respuesta = moduloProductos.filtrar(argv[3])
-        //moduloProductos.listar(respuesta)
         console.log(respuesta)
         break
     case 'editar':
         respuesta = moduloProductos.editar(+argv[3])
-        //moduloProductos.listar(respuesta)
         console.log(respuesta.green)
         break
     default:
